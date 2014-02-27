@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 # короче, штанготрекер
 #должен уметь: заводить новый training day с таймстампом
 #в trday записывать упражнения и их веса
@@ -10,4 +11,11 @@
 
 # когда-нибудь — строить графики итд
 
-#
+#first, we do a logbook for one person:
+
+logbook = {}
+
+# add value routine
+def add (ex_db, ex_name, weight, reps)
+  ex_db[ex_name] = (weight, reps)
+  puts "#{ex_name} => #{weight}"
